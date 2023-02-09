@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改密码</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: "华文新魏";
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(ellipse at bottom, #082653, #111);
+        overflow: hidden;
+    }
+
+    .night {
+        position: absolute; /* position: relative; */
+        width: 80%;
+        height: 25%;
+        transform: rotateZ(140deg);
+    }
+
+    .star {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 4px;
+        background: linear-gradient(-45deg, #fff8b3, rgba(0, 0, 255, 0));
+        border-radius: 999px;
+        filter: drop-shadow(0 0 6px #dbda74);
+        animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
+    }
+
+    @keyframes tail {
+        0% {
+            width: 0;
+        }
+        30% {
+            width: 100px;
+        }
+        100% {
+            width: 0;
+        }
+    }
+
+    @keyframes falling {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(300px);
+        }
+    }
+
+    .star::before,
+    .star::after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 2px);
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+                -45deg,
+                rgba(0, 0, 255, 0),
+                #fff8b3,
+                rgba(0, 0, 255, 0)
+        );
+        border-radius: 100%;
+        transform: translateX(50%) rotateZ(45deg);
+        animation: shining 3s ease-in-out infinite;
+    }
+
+    @keyframes shining {
+        0% {
+            width: 0;
+        }
+        50% {
+            width: 30px;
+        }
+        100% {
+            width: 0;
+        }
+    }
+
+    .star::after {
+        transform: translateX(50%) rotateZ(-45deg);
+    }
+
+    .star:nth-child(1) {
+        top: calc(50% - 100px);
+        left: calc(50% - 250px);
+        animation-delay: 1s;
+    }
+
+    .star:nth-child(1)::before,
+    .star:nth-child(1)::after {
+        animation-delay: 1s;
+    }
+
+    .star:nth-child(2) {
+        top: calc(50% - 50px);
+        left: calc(50% - 200px);
+        animation-delay: 1.2s;
+    }
+
+    .star:nth-child(2)::before,
+    .star:nth-child(2)::after {
+        animation-delay: 1.2s;
+    }
+
+    .star:nth-child(3) {
+        top: calc(50% - 0px);
+        left: calc(50% - 150px);
+        animation-delay: 1.4s;
+    }
+
+    .star:nth-child(3)::before,
+    .star:nth-child(3)::after {
+        animation-delay: 1.4s;
+    }
+
+    .star:nth-child(4) {
+        top: calc(50% - -50px);
+        left: calc(50% - 200px);
+        animation-delay: 1.6s;
+    }
+
+    .star:nth-child(4)::before,
+    .star:nth-child(4)::after {
+        animation-delay: 1.6s;
+    }
+
+    .star:nth-child(5) {
+        top: calc(50% - -100px);
+        left: calc(50% - 250px);
+        animation-delay: 1.8s;
+    }
+
+    .star:nth-child(5)::before,
+    .star:nth-child(5)::after {
+        animation-delay: 1.8s;
+    }
+
+    .container {
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 0px;
+        z-index: 10;
+    }
+
+    .login-box {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .login-box .title {
+        color: #FFF0F5;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .login-box .form-item {
+        margin-bottom: 20px;
+    }
+
+    .login-box .form-item:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .login-box .form-item input {
+        width: 100%;
+        height: 45px;
+        color: #ffffff;
+        font-size: 16px;
+        text-indent: 1em;
+        border: 1px solid #3e4956;
+        border-radius: 5px;
+        background-color: #283443;
+    }
+
+    .login-box .tip {
+        margin: 10px ;
+        font-size: 14px;
+        text-align: center
+    }
+
+    .login-box .tip a {
+        color: #409eff;
+        border-bottom: 1px solid #409eff;
+    }
+
+    .login-box .submit-btn {
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        border: 1px solid #409eff;
+        border-radius: 5px;
+        background-color: #409eff;
+        cursor: pointer;
+    }
+    .err_msg{
+    color: red;
+    padding-right: 170px;
+}
+    #password_err{
+    padding-right: 195px;
+}
+</style>
+<body>
+    <div class="container">
+    <div class="login-box">
+        <h3 class="title">
+            修改密码
+        </h3>
+        <form id="reg-form" action="" method="post">
+            <div class="form-item">
+                <span style="font-size: 18px;float: left;color: white">用户名:</span>
+                <input name="username" type="text" id="username" placeholder="请输入用户名...">
+            </div>
+            <div class="form-item">
+                <span style="font-size: 18px;float: left;color: white">手机号:</span>
+                <input name="phonenumber" type="text" id="phonenumber" placeholder="请输入手机号...">
+            </div>
+            <div class="form-item">
+                <span style="font-size: 18px;float: left;color: white">密保问题：您的学号（或工号）是什么？</span>
+                <input name="problem" type="number" id="problem" placeholder="请输入您的学号（或工号）...">
+            </div>
+            <div class="form-item">
+                <span style="font-size: 18px;float: left;color: white">新密码：</span>
+                <input name="newpassword" type="password" id="newpassword" placeholder="请设置新密码...">
+            </div>
+            <p class="tip"><a href="/login">已有账号，去登录？</a></p>
+            <p class="tip"><a href="/register">没有注册，去注册？</a></p>
+            <button class="submit-btn">修改完成</button>
+        </form>
+    </div>
+
+</div>
+    <div class="night">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+</body>
+
+</html>

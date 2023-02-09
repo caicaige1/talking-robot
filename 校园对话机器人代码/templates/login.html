@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    :root {
+        font-size: 15px;
+    }
+    body {
+        font-family: "华文新魏" !important;
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        background-color: #afeeee;
+        background-image:
+                radial-gradient(closest-side, rgba(72, 209, 204, 1), rgba(72, 209, 204, 0)),
+                radial-gradient(closest-side, rgba(179,156,208, 1), rgba(179,156,208, 0)),
+                radial-gradient(closest-side, rgba(254,254,223, 1), rgba(254,254,223, 0)),
+                radial-gradient(closest-side, rgba(173,197,207, 1), rgba(173,197,207, 0)),
+                radial-gradient(closest-side, rgba(0,201,167, 1), rgba(0,201,167, 0));
+
+        background-size:
+                130vmax 130vmax,
+                80vmax 80vmax,
+                90vmax 90vmax,
+                110vmax 110vmax,
+                90vmax 90vmax;
+        background-position:
+                -80vmax -80vmax,
+                60vmax -30vmax,
+                10vmax 10vmax,
+                -30vmax -10vmax,
+                50vmax 50vmax;
+        background-repeat: no-repeat;
+        animation: 7s movement linear infinite;
+    }
+
+    span {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        min-height: 100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        color: transparent;
+        text-shadow:
+                0px 0px 1px rgba(255, 255, 255, .6),
+                0px 4px 4px rgba(0, 0, 0, .05);
+        letter-spacing: .2rem;
+    }
+    @keyframes movement {
+        0%, 100% {
+            background-size:
+                    130vmax 130vmax,
+                    80vmax 80vmax,
+                    90vmax 90vmax,
+                    110vmax 110vmax,
+                    90vmax 90vmax;
+            background-position:
+                    -80vmax -80vmax,
+                    60vmax -30vmax,
+                    10vmax 10vmax,
+                    -30vmax -10vmax,
+                    50vmax 50vmax;
+        }
+        25% {
+            background-size:
+                    100vmax 100vmax,
+                    90vmax 90vmax,
+                    100vmax 100vmax,
+                    90vmax 90vmax,
+                    60vmax 60vmax;
+            background-position:
+                    -60vmax -90vmax,
+                    50vmax -40vmax,
+                    0vmax -20vmax,
+                    -40vmax -20vmax,
+                    40vmax 60vmax;
+        }
+        50% {
+            background-size:
+                    80vmax 80vmax,
+                    110vmax 110vmax,
+                    80vmax 80vmax,
+                    60vmax 60vmax,
+                    80vmax 80vmax;
+            background-position:
+                    -50vmax -70vmax,
+                    40vmax -30vmax,
+                    10vmax 0vmax,
+                    20vmax 10vmax,
+                    30vmax 70vmax;
+        }
+        75% {
+            background-size:
+                    90vmax 90vmax,
+                    90vmax 90vmax,
+                    100vmax 100vmax,
+                    90vmax 90vmax,
+                    70vmax 70vmax;
+            background-position:
+                    -50vmax -40vmax,
+                    50vmax -30vmax,
+                    20vmax 0vmax,
+                    -10vmax 10vmax,
+                    40vmax 60vmax;
+        }
+    }
+    .container {
+        align-self: center;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 160px;
+    }
+
+    .login-box {
+        text-align: center;
+        padding: 20px;
+        width: 80%;
+    }
+
+    .login-box .title {
+        align-self: center;
+        color: #00bfff;
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .login-box .form-item {
+        margin-bottom: 20px;
+    }
+
+    .login-box .form-item:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .login-box .form-item input {
+        width: 100%;
+        height: 45px;
+        color: black;
+        font-size: 16px;
+        text-indent: 1em;
+        border: 1px solid #3e4956;
+        border-radius: 5px;
+        background-color: rgba(r,g,b,a);
+        opacity: 30%;
+    }
+
+    .login-box .tip {
+        margin: 10px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .login-box .tip a {
+        color: #409eff;
+        border-bottom: 1px solid #409eff;
+    }
+
+    .login-box .submit-btn {
+        font-family: "华文新魏";
+        font-size: 25px;
+        width: 50%;
+        height: 40px;
+        color: #FFF5EE;
+        border: 1px solid #00bfff;
+        border-radius: 5px;
+        background-color: 	#00bfff;
+        opacity: 80%;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2 class="title">
+                用户登录
+            </h2>
+            <form action="" method="post">
+                <div class="form-item">
+                    <input type="text" placeholder="请输入手机号码..." name="phonenumber">
+                </div>
+                <div class="form-item">
+                    <input type="text" placeholder="请输入用户密码..." name="password">
+                </div>
+                <p class="tip"><a href="/register">没有账号，去注册？</a></p>
+                <p class="tip"><a href="/forget">忘记密码，去修改？</a></p>
+                <button class="submit-btn">登录</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+
+</html>

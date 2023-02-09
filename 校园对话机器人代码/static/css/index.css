@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #068016;
+    min-height: 100vh; /* 设置 body 的高度最小为浏览器视窗的高度 */
+    font-family: "正楷" !important;
+}
+
+.container {
+    width: 9rem;
+    margin: 0 auto;
+    padding-top: .5rem;
+}
+
+.container .qr-code-box {
+    height: 9rem;
+    text-align: center;
+    border-radius: 10px;
+    padding: .3rem;
+    background-image: url("/static/images/bg.jpg");
+}
+
+.qr-code-box #date-time {
+    font-size: 32px;
+    font-weight: 600;
+
+}
+
+.qr-code-box .status {
+    font-size: 14px;
+}
+
+.qr-code-box .status span {
+    font-weight: 600;
+    color: #068016;
+}
+
+
+.qr-code-box .qr-code-img {
+    margin: .3rem auto 0;
+    width: 5.8rem;
+}
+
+.qr-code-box .qr-code-img img {
+    width: 100%;
+}
+
+.qr-code-box .name,
+.qr-code-box .id-card {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.entrance::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.entrance {
+    margin-top: .4rem;
+}
+
+.entrance li {
+    width: 4.3rem;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.entrance .left-box {
+    float: left;
+}
+
+.entrance .right-box {
+    float: right;
+}
+
+.entrance li .title {
+    font-size: 14px;
+    height: .77rem;
+    line-height: .77rem;
+    text-indent: 1em;
+    color: #333;
+    background-color: #CCCCCC;
+}
+
+.entrance li .content {
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 18px;
+}
+
+.entrance .left-box .content {
+    font-weight: 600;
+}
+
+.entrance .left-box .content span {
+    color: #068016;
+    font-size: 40px;
+    line-height: 0;
+}
+
+.entrance li .content .query {
+    color: #fff;
+    width: 3rem;
+    height: 0.8rem;
+    border: none;
+    border-radius: 20px;
+    background: #0AA21E;
+}
+
+.services {
+    color: #fff;
+    margin: .4rem 0;
+}
+
+.services li {
+    height: 1.23rem;
+    line-height: 1.23rem;
+    text-indent: .4rem;
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.services li:first-child {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.services li:first-child span {
+    position: absolute;
+    font-weight: 600;
+    right: .4rem;
+}
+
+
+.container .info {
+    font-size: 15px;
+    color: #fff;
+}

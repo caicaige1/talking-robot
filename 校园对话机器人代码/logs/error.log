@@ -1,0 +1,539 @@
+[2023-02-06 10:50:37 +0800] [28846] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 10:50:37 +0800] [28846] [INFO] Listening at: http://0.0.0.0:5000 (28846)
+[2023-02-06 10:50:37 +0800] [28846] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 10:50:37 +0800] [28849] [INFO] Booting worker with pid: 28849
+[2023-02-06 10:50:38 +0800] [28849] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/www/wwwroot/project2/app.py", line 1, in <module>
+    from flask import Flask, render_template, request, session, redirect
+ModuleNotFoundError: No module named 'flask'
+[2023-02-06 10:50:38 +0800] [28849] [INFO] Worker exiting (pid: 28849)
+[2023-02-06 10:50:38 +0800] [28846] [INFO] Shutting down: Master
+[2023-02-06 10:50:38 +0800] [28846] [INFO] Reason: Worker failed to boot.
+[2023-02-06 10:50:58 +0800] [29013] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 10:50:58 +0800] [29013] [INFO] Listening at: http://0.0.0.0:5000 (29013)
+[2023-02-06 10:50:58 +0800] [29013] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 10:50:58 +0800] [29021] [INFO] Booting worker with pid: 29021
+[2023-02-06 10:50:58 +0800] [29021] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/www/wwwroot/project2/app.py", line 1, in <module>
+    from flask import Flask, render_template, request, session, redirect
+ModuleNotFoundError: No module named 'flask'
+[2023-02-06 10:50:58 +0800] [29021] [INFO] Worker exiting (pid: 29021)
+[2023-02-06 10:50:58 +0800] [29013] [INFO] Shutting down: Master
+[2023-02-06 10:50:58 +0800] [29013] [INFO] Reason: Worker failed to boot.
+[2023-02-06 10:51:48 +0800] [29267] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 10:51:48 +0800] [29267] [INFO] Listening at: http://0.0.0.0:5000 (29267)
+[2023-02-06 10:51:48 +0800] [29267] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 10:51:48 +0800] [29275] [INFO] Booting worker with pid: 29275
+[2023-02-06 10:52:14 +0800] [29441] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 10:52:14 +0800] [29441] [INFO] Listening at: http://0.0.0.0:5000 (29441)
+[2023-02-06 10:52:14 +0800] [29441] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 10:52:14 +0800] [29449] [INFO] Booting worker with pid: 29449
+[2023-02-06 11:05:28 +0800] [31776] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:05:28 +0800] [31776] [INFO] Listening at: http://0.0.0.0:5000 (31776)
+[2023-02-06 11:05:28 +0800] [31776] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:05:28 +0800] [31784] [INFO] Booting worker with pid: 31784
+[2023-02-06 11:07:12 +0800] [32144] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:07:12 +0800] [32144] [INFO] Listening at: http://0.0.0.0:5000 (32144)
+[2023-02-06 11:07:12 +0800] [32144] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:07:12 +0800] [32152] [INFO] Booting worker with pid: 32152
+[2023-02-06 11:08:02 +0800] [32144] [CRITICAL] WORKER TIMEOUT (pid:32152)
+[2023-02-06 11:08:03 +0800] [32144] [WARNING] Worker with pid 32152 was terminated due to signal 9
+[2023-02-06 11:08:03 +0800] [1590] [INFO] Booting worker with pid: 1590
+[2023-02-06 11:16:24 +0800] [32144] [WARNING] Worker with pid 1590 was terminated due to signal 9
+[2023-02-06 11:16:24 +0800] [23184] [INFO] Booting worker with pid: 23184
+[2023-02-06 11:16:25 +0800] [23184] [INFO] Parent changed, shutting down: <Worker 23184>
+[2023-02-06 11:16:25 +0800] [23184] [INFO] Worker exiting (pid: 23184)
+[2023-02-06 11:16:27 +0800] [23236] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:16:27 +0800] [23236] [INFO] Listening at: http://0.0.0.0:5000 (23236)
+[2023-02-06 11:16:27 +0800] [23236] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:16:27 +0800] [23244] [INFO] Booting worker with pid: 23244
+[2023-02-06 11:16:45 +0800] [23369] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:16:45 +0800] [23369] [INFO] Listening at: http://0.0.0.0:5000 (23369)
+[2023-02-06 11:16:45 +0800] [23369] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:16:45 +0800] [23377] [INFO] Booting worker with pid: 23377
+[2023-02-06 11:20:04 +0800] [24041] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:20:04 +0800] [24041] [INFO] Listening at: http://0.0.0.0:5000 (24041)
+[2023-02-06 11:20:04 +0800] [24041] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:20:04 +0800] [24049] [INFO] Booting worker with pid: 24049
+[2023-02-06 11:24:45 +0800] [24808] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:24:45 +0800] [24808] [INFO] Listening at: http://0.0.0.0:5000 (24808)
+[2023-02-06 11:24:45 +0800] [24808] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:24:45 +0800] [24816] [INFO] Booting worker with pid: 24816
+[2023-02-06 11:34:55 +0800] [26451] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:34:55 +0800] [26451] [INFO] Listening at: http://0.0.0.0:5000 (26451)
+[2023-02-06 11:34:55 +0800] [26451] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:34:55 +0800] [26459] [INFO] Booting worker with pid: 26459
+[2023-02-06 11:35:01 +0800] [26556] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:35:01 +0800] [26556] [INFO] Listening at: http://0.0.0.0:5000 (26556)
+[2023-02-06 11:35:01 +0800] [26556] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:35:01 +0800] [26564] [INFO] Booting worker with pid: 26564
+[2023-02-06 11:37:36 +0800] [27081] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 11:37:36 +0800] [27081] [INFO] Listening at: http://0.0.0.0:5000 (27081)
+[2023-02-06 11:37:36 +0800] [27081] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 11:37:36 +0800] [27089] [INFO] Booting worker with pid: 27089
+[2023-02-06 12:05:15 +0800] [31500] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 12:05:15 +0800] [31500] [INFO] Listening at: http://0.0.0.0:5000 (31500)
+[2023-02-06 12:05:15 +0800] [31500] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 12:05:15 +0800] [31508] [INFO] Booting worker with pid: 31508
+[2023-02-06 12:32:38 +0800] [3311] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 12:32:38 +0800] [3311] [INFO] Listening at: http://0.0.0.0:5000 (3311)
+[2023-02-06 12:32:38 +0800] [3311] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 12:32:38 +0800] [3319] [INFO] Booting worker with pid: 3319
+[2023-02-06 12:44:44 +0800] [5173] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 12:44:44 +0800] [5173] [INFO] Listening at: http://0.0.0.0:5000 (5173)
+[2023-02-06 12:44:44 +0800] [5173] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 12:44:44 +0800] [5181] [INFO] Booting worker with pid: 5181
+[2023-02-06 13:04:25 +0800] [22523] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 13:04:25 +0800] [22523] [INFO] Listening at: http://0.0.0.0:5000 (22523)
+[2023-02-06 13:04:25 +0800] [22523] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 13:04:25 +0800] [22526] [INFO] Booting worker with pid: 22526
+[2023-02-06 13:04:25 +0800] [22526] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/www/wwwroot/project2/app.py", line 1, in <module>
+    from flask import Flask, render_template, request, session, redirect
+ModuleNotFoundError: No module named 'flask'
+[2023-02-06 13:04:25 +0800] [22526] [INFO] Worker exiting (pid: 22526)
+[2023-02-06 13:04:25 +0800] [22523] [INFO] Shutting down: Master
+[2023-02-06 13:04:25 +0800] [22523] [INFO] Reason: Worker failed to boot.
+[2023-02-06 13:04:51 +0800] [22692] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 13:04:51 +0800] [22692] [INFO] Listening at: http://0.0.0.0:5000 (22692)
+[2023-02-06 13:04:51 +0800] [22692] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 13:04:51 +0800] [22698] [INFO] Booting worker with pid: 22698
+[2023-02-06 13:04:51 +0800] [22698] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/www/wwwroot/project2/app.py", line 1, in <module>
+    from flask import Flask, render_template, request, session, redirect
+ModuleNotFoundError: No module named 'flask'
+[2023-02-06 13:04:51 +0800] [22698] [INFO] Worker exiting (pid: 22698)
+[2023-02-06 13:04:51 +0800] [22692] [INFO] Shutting down: Master
+[2023-02-06 13:04:51 +0800] [22692] [INFO] Reason: Worker failed to boot.
+[2023-02-06 13:07:02 +0800] [23174] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 13:07:02 +0800] [23174] [INFO] Listening at: http://0.0.0.0:5000 (23174)
+[2023-02-06 13:07:02 +0800] [23174] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 13:07:02 +0800] [23180] [INFO] Booting worker with pid: 23180
+[2023-02-06 15:03:17 +0800] [8345] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 15:03:17 +0800] [8345] [INFO] Listening at: http://0.0.0.0:5000 (8345)
+[2023-02-06 15:03:17 +0800] [8345] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 15:03:17 +0800] [8351] [INFO] Booting worker with pid: 8351
+[2023-02-06 15:08:42 +0800] [10033] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 15:08:42 +0800] [10033] [INFO] Listening at: http://0.0.0.0:5000 (10033)
+[2023-02-06 15:08:42 +0800] [10033] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 15:08:42 +0800] [10039] [INFO] Booting worker with pid: 10039
+[2023-02-06 15:15:31 +0800] [11290] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 15:15:31 +0800] [11290] [INFO] Listening at: http://0.0.0.0:5000 (11290)
+[2023-02-06 15:15:31 +0800] [11290] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 15:15:31 +0800] [11296] [INFO] Booting worker with pid: 11296
+[2023-02-06 15:22:05 +0800] [12440] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 15:22:05 +0800] [12440] [INFO] Listening at: http://0.0.0.0:5000 (12440)
+[2023-02-06 15:22:05 +0800] [12440] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 15:22:05 +0800] [12446] [INFO] Booting worker with pid: 12446
+[2023-02-06 16:05:03 +0800] [19395] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 16:05:03 +0800] [19395] [INFO] Listening at: http://0.0.0.0:5000 (19395)
+[2023-02-06 16:05:03 +0800] [19395] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 16:05:03 +0800] [19401] [INFO] Booting worker with pid: 19401
+[2023-02-06 16:07:28 +0800] [19874] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 16:07:28 +0800] [19874] [INFO] Listening at: http://0.0.0.0:5000 (19874)
+[2023-02-06 16:07:28 +0800] [19874] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 16:07:28 +0800] [19880] [INFO] Booting worker with pid: 19880
+[2023-02-06 16:13:50 +0800] [20961] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 16:13:50 +0800] [20961] [INFO] Listening at: http://0.0.0.0:5000 (20961)
+[2023-02-06 16:13:50 +0800] [20961] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 16:13:50 +0800] [20967] [INFO] Booting worker with pid: 20967
+[2023-02-06 16:17:38 +0800] [21787] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 16:17:38 +0800] [21787] [INFO] Listening at: http://0.0.0.0:5000 (21787)
+[2023-02-06 16:17:38 +0800] [21787] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 16:17:38 +0800] [21793] [INFO] Booting worker with pid: 21793
+[2023-02-06 17:42:00 +0800] [2945] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 17:42:00 +0800] [2945] [INFO] Listening at: http://0.0.0.0:5000 (2945)
+[2023-02-06 17:42:00 +0800] [2945] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 17:42:00 +0800] [2951] [INFO] Booting worker with pid: 2951
+[2023-02-06 17:44:53 +0800] [3460] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 17:44:53 +0800] [3460] [INFO] Listening at: http://0.0.0.0:5000 (3460)
+[2023-02-06 17:44:53 +0800] [3460] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 17:44:53 +0800] [3466] [INFO] Booting worker with pid: 3466
+[2023-02-06 21:44:30 +0800] [8906] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 21:44:30 +0800] [8906] [INFO] Listening at: http://0.0.0.0:5000 (8906)
+[2023-02-06 21:44:30 +0800] [8906] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 21:44:30 +0800] [8912] [INFO] Booting worker with pid: 8912
+[2023-02-06 22:27:56 +0800] [15957] [INFO] Starting gunicorn 20.1.0
+[2023-02-06 22:27:56 +0800] [15957] [INFO] Listening at: http://0.0.0.0:5000 (15957)
+[2023-02-06 22:27:56 +0800] [15957] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-06 22:27:56 +0800] [15963] [INFO] Booting worker with pid: 15963
+[2023-02-06 22:29:20 +0800] [15957] [CRITICAL] WORKER TIMEOUT (pid:15963)
+[2023-02-06 22:29:21 +0800] [15957] [WARNING] Worker with pid 15963 was terminated due to signal 9
+[2023-02-06 22:29:21 +0800] [16202] [INFO] Booting worker with pid: 16202
+[2023-02-06 22:30:12 +0800] [15957] [CRITICAL] WORKER TIMEOUT (pid:16202)
+[2023-02-06 22:30:13 +0800] [15957] [WARNING] Worker with pid 16202 was terminated due to signal 9
+[2023-02-06 22:30:13 +0800] [16409] [INFO] Booting worker with pid: 16409
+[2023-02-06 22:30:45 +0800] [15957] [CRITICAL] WORKER TIMEOUT (pid:16409)
+[2023-02-06 22:30:46 +0800] [15957] [WARNING] Worker with pid 16409 was terminated due to signal 9
+[2023-02-06 22:30:46 +0800] [16475] [INFO] Booting worker with pid: 16475
+[2023-02-06 22:31:22 +0800] [15957] [CRITICAL] WORKER TIMEOUT (pid:16475)
+[2023-02-06 22:31:23 +0800] [15957] [WARNING] Worker with pid 16475 was terminated due to signal 9
+[2023-02-06 22:31:23 +0800] [16585] [INFO] Booting worker with pid: 16585
+[2023-02-07 20:30:33 +0800] [1133] [INFO] Starting gunicorn 20.1.0
+[2023-02-07 20:30:33 +0800] [1133] [INFO] Listening at: http://0.0.0.0:5000 (1133)
+[2023-02-07 20:30:33 +0800] [1133] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-07 20:30:33 +0800] [1139] [INFO] Booting worker with pid: 1139
+[2023-02-07 20:30:33 +0800] [1139] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/www/wwwroot/project2/app.py", line 9, in <module>
+    from flask_session import Session
+ModuleNotFoundError: No module named 'flask_session'
+[2023-02-07 20:30:33 +0800] [1139] [INFO] Worker exiting (pid: 1139)
+[2023-02-07 20:30:33 +0800] [1133] [INFO] Shutting down: Master
+[2023-02-07 20:30:33 +0800] [1133] [INFO] Reason: Worker failed to boot.
+[2023-02-07 20:31:56 +0800] [1423] [INFO] Starting gunicorn 20.1.0
+[2023-02-07 20:31:56 +0800] [1423] [INFO] Listening at: http://0.0.0.0:5000 (1423)
+[2023-02-07 20:31:56 +0800] [1423] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-07 20:31:56 +0800] [1429] [INFO] Booting worker with pid: 1429
+[2023-02-07 20:32:01,180] ERROR in app: Exception on /login [GET]
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 624, in connect
+    sock = self.retry.call_with_retry(
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 625, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 690, in _connect
+    raise err
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 678, in _connect
+    sock.connect(socket_address)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gevent/_socketcommon.py", line 607, in connect
+    raise _SocketError(err, strerror(err))
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1844, in finalize_request
+    response = self.process_response(response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2340, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask_session/sessions.py", line 168, in save_session
+    self.redis.setex(name=self.key_prefix + session.sid, value=val,
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/commands/core.py", line 2327, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 1427, in get_connection
+    connection.connect()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 630, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 113 connecting to 8.130.33.205:6379. No route to host.
+[2023-02-07 20:32:01,226] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 624, in connect
+    sock = self.retry.call_with_retry(
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 625, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 690, in _connect
+    raise err
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 678, in _connect
+    sock.connect(socket_address)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gevent/_socketcommon.py", line 607, in connect
+    raise _SocketError(err, strerror(err))
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1844, in finalize_request
+    response = self.process_response(response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2340, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask_session/sessions.py", line 168, in save_session
+    self.redis.setex(name=self.key_prefix + session.sid, value=val,
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/commands/core.py", line 2327, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 1427, in get_connection
+    connection.connect()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 630, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 113 connecting to 8.130.33.205:6379. No route to host.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 624, in connect
+    sock = self.retry.call_with_retry(
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 625, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 690, in _connect
+    raise err
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 678, in _connect
+    sock.connect(socket_address)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gevent/_socketcommon.py", line 607, in connect
+    raise _SocketError(err, strerror(err))
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1844, in finalize_request
+    response = self.process_response(response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2340, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask_session/sessions.py", line 168, in save_session
+    self.redis.setex(name=self.key_prefix + session.sid, value=val,
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/commands/core.py", line 2327, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 1427, in get_connection
+    connection.connect()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 630, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 113 connecting to 8.130.33.205:6379. No route to host.
+[2023-02-07 20:32:09,971] ERROR in app: Exception on /login [GET]
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 624, in connect
+    sock = self.retry.call_with_retry(
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 625, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 690, in _connect
+    raise err
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 678, in _connect
+    sock.connect(socket_address)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gevent/_socketcommon.py", line 607, in connect
+    raise _SocketError(err, strerror(err))
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1844, in finalize_request
+    response = self.process_response(response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2340, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask_session/sessions.py", line 168, in save_session
+    self.redis.setex(name=self.key_prefix + session.sid, value=val,
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/commands/core.py", line 2327, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 1427, in get_connection
+    connection.connect()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 630, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 113 connecting to 8.130.33.205:6379. No route to host.
+[2023-02-07 20:32:10,012] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 624, in connect
+    sock = self.retry.call_with_retry(
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 625, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 690, in _connect
+    raise err
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 678, in _connect
+    sock.connect(socket_address)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gevent/_socketcommon.py", line 607, in connect
+    raise _SocketError(err, strerror(err))
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1844, in finalize_request
+    response = self.process_response(response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2340, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask_session/sessions.py", line 168, in save_session
+    self.redis.setex(name=self.key_prefix + session.sid, value=val,
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/commands/core.py", line 2327, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 1427, in get_connection
+    connection.connect()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 630, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 113 connecting to 8.130.33.205:6379. No route to host.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 624, in connect
+    sock = self.retry.call_with_retry(
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 625, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 690, in _connect
+    raise err
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 678, in _connect
+    sock.connect(socket_address)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/gevent/_socketcommon.py", line 607, in connect
+    raise _SocketError(err, strerror(err))
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 1844, in finalize_request
+    response = self.process_response(response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask/app.py", line 2340, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/flask_session/sessions.py", line 168, in save_session
+    self.redis.setex(name=self.key_prefix + session.sid, value=val,
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/commands/core.py", line 2327, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 1427, in get_connection
+    connection.connect()
+  File "/www/wwwroot/project2/1f0975918788df2b625e97b5bcf6360b_venv/lib/python3.9/site-packages/redis/connection.py", line 630, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 113 connecting to 8.130.33.205:6379. No route to host.
+[2023-02-07 23:30:27 +0800] [29052] [INFO] Starting gunicorn 20.1.0
+[2023-02-07 23:30:27 +0800] [29052] [INFO] Listening at: http://0.0.0.0:5000 (29052)
+[2023-02-07 23:30:27 +0800] [29052] [INFO] Using worker: geventwebsocket.gunicorn.workers.GeventWebSocketWorker
+[2023-02-07 23:30:27 +0800] [29058] [INFO] Booting worker with pid: 29058

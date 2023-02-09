@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: "华文新魏";
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(ellipse at bottom, #082653, #111);
+        overflow: hidden;
+    }
+
+    .night {
+        position: absolute; /* position: relative; */
+        width: 100%;
+        height: 100%;
+        transform: rotateZ(140deg);
+    }
+
+
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 0px;
+        z-index: 10;
+    }
+
+    .login-box {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .login-box .title {
+        color: #eee;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .login-box .form-item {
+        margin-bottom: 20px;
+    }
+
+    .login-box .form-item:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .login-box .form-item input {
+        width: 100%;
+        height: 45px;
+        color: #ffffff;
+        font-size: 16px;
+        text-indent: 1em;
+        border: 1px solid #3e4956;
+        border-radius: 5px;
+        background-color: #283443;
+    }
+
+    .login-box .tip {
+        margin: 10px 0;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .login-box .tip a {
+        color: #409eff;
+        border-bottom: 1px solid #409eff;
+    }
+
+    .login-box .submit-btn {
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        border: 1px solid #409eff;
+        border-radius: 5px;
+        background-color: #409eff;
+        cursor: pointer;
+    }
+    .err_msg{
+    color: red;
+    padding-right: 170px;
+}
+    #password_err{
+    padding-right: 195px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h3 class="title">
+                用户注册
+            </h3>
+            <form id="reg-form" action="" method="post">
+                <div class="form-item">
+                    <input name="username" type="text" id="username" placeholder="请输入用户名...">
+                </div>
+                <!--这里是被隐藏的提示信息-->
+                <span id="username_err" class="err_msg" style="display:none ; font-size: 16px">用户名不合乎规则</span>
+                <div class="form-item">
+                    <input name="phonenumber" type="text" id="phonenumber" placeholder="请输入手机号...">
+                </div>
+                <!--这里是被隐藏的提示信息-->
+                <span id="phonenumber_err" class="err_msg" style="display:none;font-size: 16px">手机号格式有误</span>
+                <div class="form-item">
+                    <input name="password" type="password" id="password" placeholder="请输入用户密码...">
+                </div>
+                <!--这里是被隐藏的提示信息-->
+                <span id="password_err" class="err_msg" style="display:none;font-size: 16px">密码格式有误</span>
+                <div class="form-item">
+                    <span style="font-size: 14px;float: left;color: white";>
+                        密保问题：您的学号（或工号）是什么？
+                    </span>
+                    <input name="problem" type="text" placeholder="请输入学号（或工号）" >
+                </div>
+                <p class="tip"><a href="/login">已有账号，去登录？</a></p>
+                <p class="tip"><a href="/forget">忘记密码，去修改？</a></p>
+                <button class="submit-btn">注册</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<script>
+    //1. 验证用户名是否符合规则
+    //1.1 获取用户名的输入框
+    var  username = document.getElementById("username");
+    //1.2 绑定onblur事件  》》》 当元素失去焦点时发生此事件
+    username.onblur =judgeUserName;
+        function judgeUserName(){
+            //1.3 获取用户在username输入框中输入的信息，排除掉空白字符
+            var usernameValue = username.value.trim();
+            //1.4 判断username的值是否符合规则
+            var  flag = usernameValue.length>=6&&usernameValue.length<=12;
+            if (flag){
+                document.getElementById("username_err").style.display="none";
+            }else{
+                document.getElementById("username_err").style.display="";
+            }
+            return flag;
+        }
+    //2. 验证密码是否符合规则（CTRL+R 修改替换）
+    //2.1 获取密码的输入框
+    var  password = document.getElementById("password");
+    //2.2 绑定onblur事件  》》》 当元素失去焦点时发生此事件
+    password.onblur =judgePassword;
+        function judgePassword(){
+            //2.3 获取用户在password输入框中输入的信息，排除掉空白字符
+            var passwordValue = password.value.trim();
+            //2.4 判断password的值是否符合规则
+            var flag = passwordValue.length>=6&&passwordValue.length<=12;
+            if (flag){
+                document.getElementById("password_err").style.display="none";
+            }else{
+                document.getElementById("password_err").style.display="";
+            }
+            return flag;
+        }
+    //3. 验证手机号码是否符合规则（CTRL+R 修改替换）
+    //2.1 获取密码的输入框
+    var  phonenumber = document.getElementById("phonenumber");
+    //3.2 绑定onblur事件  》》》 当元素失去焦点时发生此事件
+    phonenumber.onblur =judgePhonenumber;
+        function judgePhonenumber(){
+            //2.3 获取用户在password输入框中输入的信息，排除掉空白字符
+            var phonenumberValue = phonenumber.value.trim();
+            //2.4 判断password的值是否符合规则
+            var flag = phonenumberValue.length==11;
+            if (flag){
+                document.getElementById("phonenumber_err").style.display="none";
+            }else{
+                document.getElementById("phonenumber_err").style.display="";
+            }
+            return flag;
+        }
+</script>
+</html>
