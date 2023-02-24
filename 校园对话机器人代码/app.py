@@ -8,7 +8,7 @@ import random
 import requests
 from flask_session import Session
 import redis
-
+import openai
 
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ app.config['SECRET_KEY'] = os.urandom(30)
 app.config['SESSION_TYPE']='redis'
 app.config['SESSION_REDIS']=redis.Redis(host='8.130.33.205',port='6379',password='123456')
 Session(app)
-
+openai.api_key = "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"
 
 client_id = "UQeBiI4cPOlFFnICUSsRSPfr"
 client_secret = "ayPatGswBPO7druGCezni91aARk8ksrf"
@@ -57,8 +57,30 @@ def unit_chat(chat_input, user_id="user"):
     unit_chat_response_action_list = unit_chat_response_obj["action_list"]
     unit_chat_response_action_obj = random.choice(unit_chat_response_action_list)
     unit_chat_response_say = unit_chat_response_action_obj["say"]
-    return unit_chat_response_say
+    if unit_chat_response_say == '你想要问的是以下哪个？':
+        unit_chat_response_say = unit_chat_response_list[0]['action_list'][0]['refine_detail']['option_list'][0]['info']['full_answer']    
+    if unit_chat_response_say == '我不知道该怎样答复您。':
+        # Set up the OpenAI API client
+        openai.api_key = "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"
 
+        # Set up the model and prompt
+        model_engine = "text-davinci-003"
+        prompt = chat_input
+
+        # Generate a response
+        completion = openai.Completion.create(
+            engine=model_engine,
+            prompt=prompt,
+            max_tokens=1024,
+            n=1,
+            stop=None,
+            temperature=0.5,
+        )
+
+        response = completion.choices[0].text
+        unit_chat_response_say = response
+    
+    return unit_chat_response_say
 
 @app.route('/')
 def index():
@@ -184,7 +206,7 @@ def answer():
     reply = unit_chat(text)
     print(reply)
     return reply
-
+    
 @app.route('/forget',methods=['GET','POST'])
 def forget():
     if request.method == 'GET':
