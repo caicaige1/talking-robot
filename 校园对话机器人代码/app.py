@@ -61,7 +61,7 @@ def unit_chat(chat_input, user_id="user"):
         unit_chat_response_say = unit_chat_response_list[0]['action_list'][0]['refine_detail']['option_list'][0]['info']['full_answer']    
     if unit_chat_response_say == '我不知道该怎样答复您。':
         # Set up the OpenAI API client
-        openai.api_key = "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"
+        openai.api_key = 
 
         # Set up the model and prompt
         model_engine = "text-davinci-003"
